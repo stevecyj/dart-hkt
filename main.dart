@@ -1,12 +1,30 @@
 void main() {
-  DemoClass d1 = new DemoClass();
-  print(d1.intVal);
+Animal animal=new Animal();
+animal.eat();
+
+Dog dog=new Dog();
+dog.eatTest();
 }
 
-class DemoClass {
-  late int intVal;
+class ClassSample {
+  void fly() {
+    print('fly');
+  }
+}
 
-  DemoClass() {
-    intVal = -1;
+class Animal{
+  void eat(){
+    print('Animal: eat');
+  }
+}
+
+class Dog extends Animal{
+  void eat(){
+    print('Dog: eat');
+  }
+
+  void eatTest(){
+    this.eat();
+    super.eat();
   }
 }
