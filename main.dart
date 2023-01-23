@@ -1,16 +1,18 @@
 void main() {
-Father father=new Father();
-father.makeMoney();
+  Child c = new Child();
+  c.getInfo();
 }
 
-abstract class Father{
-  void makeMoney();
-}
-
-class Child extends Father{
-  @override
-  void makeMoney() {
-    // TODO: implement makeMoney
+class Info {
+  void getInfo() {
+    print('getInfo...');
   }
+}
 
+class Child implements Info {
+  @override
+  void getInfo() {
+    // TODO: implement getInfo
+    print('Child getInfo...');
+  }
 }
