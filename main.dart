@@ -1,30 +1,16 @@
 void main() {
-Animal animal=new Animal();
-animal.eat();
-
-Dog dog=new Dog();
-dog.eatTest();
+Father father=new Father();
+father.makeMoney();
 }
 
-class ClassSample {
-  void fly() {
-    print('fly');
-  }
+abstract class Father{
+  void makeMoney();
 }
 
-class Animal{
-  void eat(){
-    print('Animal: eat');
-  }
-}
-
-class Dog extends Animal{
-  void eat(){
-    print('Dog: eat');
+class Child extends Father{
+  @override
+  void makeMoney() {
+    // TODO: implement makeMoney
   }
 
-  void eatTest(){
-    this.eat();
-    super.eat();
-  }
 }
